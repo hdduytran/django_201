@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} Create New Post{% endblock title %}
+{% block body %}
+    <form method="POST" action='.'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <div>
+            <!-- component -->
+            <button class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none" type='submit'>
+                Create post
+            </button>
+        </div>
+    </form>
+{% endblock body %}
